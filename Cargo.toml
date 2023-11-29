@@ -1,0 +1,9 @@
+[package]
+name = "elf"
+authors = ["Miao Hao <haomiao19@mails.ucas.ac.cn>"]
+version = "0.1.0"
+edition = "2021"
+license = "GPL-2.0"
+description = "Extract ELF infotmation from binary, compatible with elf.h in Rust-style"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
