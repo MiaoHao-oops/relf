@@ -92,14 +92,4 @@ impl Elf64Shdr {
             )
         }
     }
-
-    // pub fn get_relas(&self, start: usize) -> &'static [Elf64Rela] {
-    //     assert!(self.sh_type == SHT_RELA);
-    //     unsafe {
-    //         core::slice::from_raw_parts(
-    //             (start + self.sh_offset as usize) as *const Elf64Rela,
-    //             (self.sh_size / self.sh_entsize) as usize
-    //         )
-    //     }
-    // }
 }

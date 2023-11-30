@@ -82,6 +82,15 @@ impl Elf64Ehdr {
         }
     }
 
+    pub fn get_pht(&self, start: usize) -> &'static [Elf64Phdr] {
+        unsafe {
+            core::slice::from_raw_parts(
+                (start + self.e_phoff as usize) as *const Elf64Phdr,
+                self.e_phnum as usize
+            )
+        }
+    }
+
     pub fn get_shstrtab_hdr(&self, start: usize) -> &'static Elf64Shdr {
         &self.get_sht(start)[self.e_shstrndx as usize]
     }
@@ -100,7 +109,9 @@ impl Elf64Ehdr {
 pub mod shdr;
 pub mod rela;
 pub mod sym;
+pub mod phdr;
 
 pub use shdr::Elf64Shdr as Elf64Shdr;
 pub use rela::Elf64Rela as Elf64Rela;
 pub use sym::Elf64Sym as Elf64Sym;
+pub use phdr::Elf64Phdr as Elf64Phdr;
