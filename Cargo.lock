@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "elf"
+name = "relf"
 version = "0.1.0"

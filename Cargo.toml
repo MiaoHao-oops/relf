@@ -1,5 +1,5 @@
 [package]
-name = "elf"
+name = "relf"
 authors = ["Miao Hao <haomiao19@mails.ucas.ac.cn>"]
 version = "0.1.0"
 edition = "2021"
